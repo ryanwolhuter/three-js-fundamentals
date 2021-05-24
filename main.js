@@ -22,22 +22,6 @@ function main() {
   renderer.render(scene, camera)
 
   function render(time) {
-    time *= 0.001
-
-    // move target
-    targetOrbit.rotation.y = time * .27
-    targetBob.position.y = Math.sin(time * 2) * 4
-    targetMesh.rotation.x = time * 7
-    targetMesh.rotation.y = time * 13
-    targetMaterial.emissive.setHSL(time * 10 % 1, 1, .25)
-    targetMaterial.color.setHSL(time * 10 % 1, 1, .25)
-
-    // move tank
-    const tankTime = time * 0.5
-    curve.getPointAt(tankTime % 1, tankPosition)
-    curve.getPointAt((tankTime + 0.01) % 1, tankTarget)
-    tank.position.set(tankPosition.x, 0, tankPosition.y)
-    tank.lookAt(tankTarget.x, 0, tankTarget.y)
 
     if (resizeRendererToDisplaySize(renderer)) {
       const canvas = renderer.domElement
