@@ -11,6 +11,7 @@
     "vite": "^2.3.3"
   },
   "dependencies": {
+    "@types/dat.gui": "^0.7.6",
     "three": "^0.128.0"
   }
 }
